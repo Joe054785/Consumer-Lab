@@ -177,17 +177,24 @@ public class Review {
     // set up a sentimentTotal variable
     double sentimentTotal = 0;
     String str = " ";
-    int tempLength = 0;
+    int j = 1;
     // loop through the file contents 
-    for (int i = 0; i <= standardReview.length(); i+=str.length())
+    for (int i = 1; i < standardReview.length(); i++)
     {
-       // find each word
-       if (filename.substring(i,i+1).equals(" "))
+       if (j > Review.length())
        {
-           str = filename.substring(tempLength,i);
-           sentimentTotal += sentimentVal(str);
-           Review = Review.substring(i+1);
+           sentimentTotal += sentimentVal(Review);
+           return sentimentTotal;
        }
+       else if(Review.substring(j-1, j).equals(" "))
+       {
+           str = Review.substring(0,j-1);
+           sentimentTotal += sentimentVal(str);
+           Review = Review.substring(j);
+           System.out.println(str);
+           j=1;
+       }
+       j++;
        // add in its sentimentVal
        // set the file contents to start after this word
     }
