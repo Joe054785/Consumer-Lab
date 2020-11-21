@@ -181,22 +181,22 @@ public class Review {
     // loop through the file contents 
     for (int i = 1; i < standardReview.length(); i++)
     {
+        //prevents a length exception on strings
        if (j > Review.length())
        {
            sentimentTotal += sentimentVal(Review);
            return sentimentTotal;
        }
+       // tests for spaces to get words that are tested for
+       //sentiment value, the sentiment value then adds to a total.
        else if(Review.substring(j-1, j).equals(" "))
        {
            str = Review.substring(0,j-1);
            sentimentTotal += sentimentVal(str);
            Review = Review.substring(j);
-           System.out.println(str);
            j=1;
        }
        j++;
-       // add in its sentimentVal
-       // set the file contents to start after this word
     }
    
 
@@ -216,8 +216,26 @@ public class Review {
     // determine number of stars between 0 and 4 based on totalSentiment value 
     int stars = 0; // change this!
     // write if statements here
-
-
+    if (totalSentiment(filename) >= 15)
+    {
+        stars += 4;
+    }
+    else if (totalSentiment(filename) >= 5)
+    {
+        stars += 3;
+    }
+    else if (totalSentiment(filename) >= -5)
+    {
+        stars += 2;
+    }
+    else if (totalSentiment(filename) > -15)
+    {
+        stars += 1;
+    }
+    else
+    {
+        stars = 0;
+    }
   
     // return number of stars
     return stars; 
