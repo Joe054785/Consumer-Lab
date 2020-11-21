@@ -240,4 +240,36 @@ public class Review {
     // return number of stars
     return stars; 
   }
+  public static String fakeReview(String fileName)
+  {
+      String Review = textToString(fileName);
+      String finalReview = " ";
+      String str = " ";
+      String str1 = " ";
+      String str2 = " ";
+      String str3 = " ";
+      int j = 1;
+      for (int i = 0; i < Review.length(); i++)
+      {
+          int star = Review.indexOf("*");
+          if(Review.substring(j-1,j).equals("*"))
+          {
+              while(!Review.substring(j-1,j).equals(" "))
+              {
+                 j++;
+               }
+              str1 = randomAdjective();
+              str2 = Review.substring(0,star);
+              Review = Review.substring(j-1);
+              str = str2 + str1.toLowerCase();
+              finalReview += str;
+              System.out.println(finalReview);
+              j = 1;
+          }
+      j++;
+      }
+      return finalReview+Review;
+  }
+ 
 }
+
