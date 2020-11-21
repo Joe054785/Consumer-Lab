@@ -35,7 +35,7 @@ public class Review {
     }
   
   
-  //read in the positive adjectives in postiveAdjectives.txt
+  //read in the positive adjectives from postiveAdjectives.txt
      try {
       Scanner input = new Scanner(new File("positiveAdjectives.txt"));
       while(input.hasNextLine()){
