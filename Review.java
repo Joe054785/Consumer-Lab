@@ -257,8 +257,8 @@ public class Review {
               while(!Review.substring(j-1,j).equals(" "))
               {
                  j++;
-               }
-              str1 = randomAdjective();
+              }
+              str1 = randomPositiveAdj();
               str2 = Review.substring(0,star);
               Review = Review.substring(j-1);
               str = str2 + str1.toLowerCase();
