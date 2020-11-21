@@ -1,12 +1,6 @@
-------------------------------------------------------------------------
-This is the project README file. Here, you should describe your project.
-Tell the reader (someone who does not know anything about this project)
-all he/she needs to know. The comments should usually include at least:
-------------------------------------------------------------------------
-
-PROJECT TITLE:
-PURPOSE OF PROJECT:
-VERSION or DATE:
-HOW TO START THIS PROJECT:
-AUTHORS:
-USER INSTRUCTIONS:
+PROJECT TITLE: Consumer Lab
+PURPOSE OF PROJECT: AP Computer Science Instructional Lab
+VERSION or DATE: 11/20/20
+HOW TO START THIS PROJECT: Start with the totalSentiment, starReview, fakeReveiw, or main method. Make sure you have a review already in a text document.
+AUTHORS: Zach Vanderslice and Joseph Hall
+USER INSTRUCTIONS: N/A
